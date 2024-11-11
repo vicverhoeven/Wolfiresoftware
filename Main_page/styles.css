@@ -1,0 +1,157 @@
+/* Algemene reset voor marges en padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;  /* Zorg ervoor dat de body en html de volledige hoogte gebruiken */
+  margin: 0;     /* Verwijder marges van html en body */
+  padding: 0;    /* Verwijder padding van html en body */
+  width: 100%;   /* Zorg ervoor dat de body de volledige breedte gebruxsikt */
+}
+
+/* Announcement Bar styling */
+.announcement-bar {
+  background-image: url("../images/background.png");
+  color: #333; /* Tekstkleur */
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Voeg schaduw toe */
+  position: relative; /* Zorg ervoor dat de schaduw goed werkt */
+  z-index: 10; 
+}
+
+/* Phone Line styling */
+.phone-line {
+  background-color: #ffffff; /* Lichte achtergrondkleur */
+  color: #333; /* Tekstkleur */
+  padding: 5px;
+  display: flex; /* Gebruik flexbox voor betere uitlijning */
+  align-items: center; /* Zorg ervoor dat de items verticaal gecentreerd zijn */
+  justify-content: end;
+}
+
+.contact-button {
+  margin-left: 10px; /* Voeg wat ruimte toe tussen het telefoonnummer en de knop */
+  padding: 8px 15px; /* Voeg padding toe voor de knop */
+  color: #333; /* Tekstkleur voor de knop */
+  text-decoration: none; /* Verwijder onderstreping */
+  border-radius: 4px; /* Maak de hoeken van de knop afgerond */
+}
+
+
+.contact-button:hover {
+  color: #57938e; /* Verander de achtergrondkleur bij hover */
+}
+
+header {
+  background: #fff; /* Header kleur */
+  padding: 8px;
+  display: flex; 
+  align-items: center; 
+}
+
+.logo {
+  max-width: 190px; 
+  height: auto;
+  margin-right: 20px; 
+}
+
+/* Navigatiebalk styling */
+nav {
+  display: flex;
+  justify-content: center; 
+  flex-grow: 1;
+  margin-left: 1%; 
+}
+
+nav a {
+  color: #333; /* Zwarte tekstkleur voor navigatie */
+  padding: 10px 15px;
+  font-size: 1.2em;
+  text-decoration: none;
+  margin: 0 30px;
+}
+
+nav a:hover {
+  color: #57938e;
+}
+
+/* Hoofdcontent styling */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p, ul {
+  font-size: 1em;
+  color: #555;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  background: #fff;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Contactformulier styling */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #555;
+}
+
+.logo {
+  max-width: 190px; 
+  height: auto;
+  margin-right: 20px; /* Voeg ruimte toe tussen het logo en de navigatie */
+}

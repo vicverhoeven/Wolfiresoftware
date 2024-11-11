@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Wolfire Software</title>
+  <link rel="stylesheet" href="contact-styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="../images/logo.png" alt="Wolfire Logo" class="logo">
+  </header>
+
+  <!-- Navigatiebalk -->
+  <nav>
+    <a href="../Main_page/index.html">Home</a>
+    <a href="../Over_ons/over-ons.html">Over Ons</a>
+    <a href="#services">Diensten</a>
+    <a href="#projects">Projecten</a>
+    <a href="../Contact/contact.html">Contact</a>
+  </nav>
+  <h1>Contact</h1>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Contact Sectie -->
+    <section id="contact">
+      <h2>Neem Contact met Ons Op</h2>
+      <p>Neem contact op voor een vrijblijvend gesprek. Vul het formulier in, en wij nemen zo snel mogelijk contact met je op.</p>
+      
+      <!-- Contactformulier -->
+      <form action="submit_form.php" method="post">
+        <label for="name">Naam:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Bericht:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Verstuur</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Wolfire Software. Alle rechten voorbehouden.</p>
+  </footer>
+</body>
+</html>
