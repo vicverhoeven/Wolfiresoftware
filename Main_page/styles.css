@@ -13,6 +13,22 @@ html, body {
   width: 100%;   /* Zorg ervoor dat de body de volledige breedte gebruxsikt */
 }
 
+.main-content {
+  text-align: center; /* Centraal uitlijnen */
+  margin: 20px; /* Ruimte rondom */
+}
+
+.main-content h1 {
+  font-size: 24px; /* Pas de grootte van de tekst aan */
+  margin-bottom: 10px; /* Ruimte onder de titel */
+}
+
+.main-content img {
+  max-width: 100%; /* Zorg ervoor dat de afbeelding responsief is */
+  height: auto; /* Houd de aspect ratio */
+  border-radius: 10px;
+}
+
 /* Announcement Bar styling */
 .announcement-bar {
   background-image: url("../images/background.png");
@@ -55,7 +71,7 @@ header {
 }
 
 .logo {
-  max-width: 190px; 
+  max-width: 200px; 
   height: auto;
   margin-right: 20px; 
 }
@@ -69,15 +85,15 @@ nav {
 }
 
 nav a {
-  color: #333; /* Zwarte tekstkleur voor navigatie */
+  color: #3a1764; /* Zwarte tekstkleur voor navigatie */
   padding: 10px 15px;
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-decoration: none;
   margin: 0 30px;
 }
 
 nav a:hover {
-  color: #57938e;
+  color: #7a46da;
 }
 
 /* Hoofdcontent styling */
@@ -103,6 +119,65 @@ p, ul {
 ul {
   list-style: none;
   padding: 0;
+}
+
+.diensten {
+  margin: 40px 0; /* Ruimte boven en onder de sectie */
+  text-align: center; /* Centraal uitlijnen */
+}
+
+.diensten h2 {
+  font-size: 28px; /* Titelgrootte */
+  margin-bottom: 20px; /* Ruimte onder de titel */
+}
+
+.diensten-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolommen */
+  gap: 20px; /* Ruimte tussen de boxen */
+  padding: 0 20px; /* Padding aan de zijkanten */
+}
+
+.dienst-box {
+  background-color: #f9f9f9; /* Achtergrondkleur van de box */
+  border-radius: 10px; /* Afgeronde hoeken */
+  padding: 20px; /* Ruimte binnen de box */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Schaduw effect */
+}
+
+.dienst-box img {
+  max-width: 100%; /* Zorg ervoor dat de afbeelding responsief is */
+  height: auto; /* Houd de aspect ratio */
+  border-radius: 10px; /* Afgeronde hoeken voor de afbeelding */
+}
+
+.dienst-box h3 {
+  font-size: 20px; /* Titelgrootte in de box */
+  margin: 10px 0; /* Ruimte boven en onder de titel */
+}
+
+.dienst-box p {
+  font-size: 16px; /* Beschrijvinggrootte */
+}
+
+.cta {
+  text-align: center; /* Centraal uitlijnen */
+  margin: 40px 0; /* Ruimte boven en onder de knop */
+}
+
+.cta-button {
+  display: inline-block; /* Zorg ervoor dat de knop als een blok wordt weergegeven */
+  padding: 15px 30px; /* Ruimte binnen de knop */
+  background-color: #007BFF; /* Achtergrondkleur van de knop */
+  color: white; /* Tekstkleur */
+  text-decoration: none; /* Geen onderstreping */
+  border-radius: 5px; /* Afgeronde hoeken */
+  font-size: 18px; /* Tekstgrootte */
+  transition: background-color 0.3s; /* Effect bij hover */
+}
+
+.cta-button:hover {
+  background-color: #0056b3; /* Donkerdere kleur bij hover */
 }
 
 /* Footer styling */
