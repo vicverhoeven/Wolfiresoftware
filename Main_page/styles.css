@@ -68,6 +68,9 @@ header {
   padding: 8px;
   display: flex; 
   align-items: center; 
+  position: sticky; /* Dit zorgt ervoor dat de header vast blijft staan */
+            top: 0;
+            z-index: 1000; 
 }
 
 .logo {
@@ -145,11 +148,21 @@ ul {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Schaduw effect */
 }
 
+
+
+
 .dienst-box img {
   max-width: 100%; /* Zorg ervoor dat de afbeelding responsief is */
   height: auto; /* Houd de aspect ratio */
   border-radius: 10px; /* Afgeronde hoeken voor de afbeelding */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.dienst-box img:hover {
+  transform: scale(1.03); /* Vergroot de box bij hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Voeg schaduw toe bij hover */
+}
+
 
 .dienst-box h3 {
   font-size: 20px; /* Titelgrootte in de box */
