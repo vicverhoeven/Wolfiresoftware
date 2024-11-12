@@ -24,15 +24,15 @@ html, body {
 }
 
 .main-content img {
-  max-width: 100%; /* Zorg ervoor dat de afbeelding responsief is */
+  max-width: 70%; /* Zorg ervoor dat de afbeelding responsief is */
   height: auto; /* Houd de aspect ratio */
   border-radius: 10px;
 }
 
 /* Announcement Bar styling */
 .announcement-bar {
-  background-image: url("../images/background.png");
-  color: #333; /* Tekstkleur */
+  background-image: url("../images/mac.png");
+  color: #dbdbdb; /* Tekstkleur */
   padding: 10px;
   text-align: center;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Voeg schaduw toe */
@@ -60,7 +60,7 @@ html, body {
 
 
 .contact-button:hover {
-  color: #57938e; /* Verander de achtergrondkleur bij hover */
+  color: #7a46da;
 }
 
 header {
