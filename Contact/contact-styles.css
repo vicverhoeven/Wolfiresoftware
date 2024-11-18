@@ -18,6 +18,7 @@
     background: #fff;
     padding: 8px;
     text-align: center;  /* Zorg ervoor dat de header de volledige breedte gebruikt */
+    
   }
   
   .logo {
@@ -34,8 +35,11 @@
   nav {
     display: flex;
     justify-content: center;
-    background-color: #e2e2e2;
-    flex-grow: 1;  /* Zorg ervoor dat de nav de volledige breedte gebruikt */   /* Verwijder marges van de nav */
+    background-color: #ffffff;
+    flex-grow: 1;  
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); /* Pas verticale offset aan */
+    position: relative; 
+    z-index: 10; 
   }
   
   nav a {

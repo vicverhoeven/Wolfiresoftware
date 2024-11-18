@@ -10,7 +10,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 /* Announcement Bar styling */
@@ -91,6 +90,32 @@ section {
   background-color: #f9f9f9;
   border-radius: 8px;
 }
+
+.container {
+  display: flex; /* Gebruik flexbox voor de lay-out */
+  align-items: center; /* Centreer de items verticaal */
+  justify-content: space-between; /* Zorg voor ruimte tussen de tekst en afbeelding */
+  padding: 20px;
+}
+
+.text-section {
+  flex: 1; /* Laat de tekstsectie de beschikbare ruimte innemen */
+  padding-right: 20px; /* Ruimte tussen tekst en afbeelding */
+}
+
+.image-section {
+  flex-shrink: 0; /* Zorg ervoor dat de afbeelding niet krimpt */
+}
+
+.profile-image {
+  width: 100px; /* Vaste breedte van 100 pixels */
+  height: 100px; /* Vaste hoogte van 100 pixels */
+  object-fit: cover; /* Zorg ervoor dat de afbeelding goed wordt bijgesneden */
+  border-radius: 50%; /* Maak de afbeelding rond (optioneel) */
+}
+
+
+
 
 h2 {
   font-size: 1.5em;

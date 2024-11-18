@@ -6,16 +6,24 @@
   font-family: Arial, sans-serif;
 }
 
+main {
+  margin: 0; /* Verwijder marges van main */
+  padding: 0; /* Verwijder padding van main */
+  width: 100%; /* Zorg ervoor dat de main de volledige breedte gebruikt */
+}
+
 html, body {
-  height: 100%;  /* Zorg ervoor dat de body en html de volledige hoogte gebruiken */
   margin: 0;     /* Verwijder marges van html en body */
   padding: 0;    /* Verwijder padding van html en body */
   width: 100%;   /* Zorg ervoor dat de body de volledige breedte gebruxsikt */
+  
 }
+
 
 .main-content {
   text-align: center; /* Centraal uitlijnen */
-  margin: 20px; /* Ruimte rondom */
+  margin: 0; /* Verwijder marge */
+  padding: 0; /* Verwijder padding */
 }
 
 .main-content h1 {
@@ -24,9 +32,8 @@ html, body {
 }
 
 .main-content img {
-  max-width: 70%; /* Zorg ervoor dat de afbeelding responsief is */
+  max-width: 100%; /* Zorg ervoor dat de afbeelding responsief is */
   height: auto; /* Houd de aspect ratio */
-  border-radius: 10px;
 }
 
 /* Announcement Bar styling */
@@ -68,7 +75,7 @@ header {
   padding: 8px;
   display: flex; 
   align-items: center; 
-  position: sticky; /* Dit zorgt ervoor dat de header vast blijft staan */
+  position:sticky; /* Dit zorgt ervoor dat de header vast blijft staan */
             top: 0;
             z-index: 1000; 
 }
@@ -99,10 +106,6 @@ nav a:hover {
   color: #7a46da;
 }
 
-/* Hoofdcontent styling */
-main {
-  padding: 20px;
-}
 
 section {
   margin-bottom: 40px;
@@ -205,41 +208,64 @@ footer {
   width: 100%;
 }
 
-/* Contactformulier styling */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
+
+
+/* Basis stijlen blijven zoals ze zijn */
+
+/* Media query voor tablets */
+@media (max-width: 768px) {
+  .diensten-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolommen op tablets */
+  }
+
+  nav a {
+    font-size: 1.2em; /* Kleinere tekstgrootte voor navigatie */
+    margin: 0 15px; /* Verminder de marge tussen navigatie-items */
+  }
+
+  .cta-button {
+    padding: 12px 25px; /* Kleinere padding voor de knop */
+    font-size: 16px; /* Kleinere tekstgrootte voor de knop */
+  }
+
+  .dienst-box h3 {
+    font-size: 18px; /* Kleinere titelgrootte in de box */
+  }
+
+  .dienst-box p {
+    font-size: 14px; /* Kleinere beschrijvinggrootte */
+  }
 }
 
-form label {
-  margin-top: 10px;
-}
+/* Media query voor smartphones */
+@media (max-width: 480px) {
+  .diensten-grid {
+    grid-template-columns: 1fr; /* 1 kolom op smartphones */
+  }
 
-form input, form textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+  header {
+    flex-direction: column; /* Stapel header elementen op elkaar */
+    align-items: flex-start; /* Uitlijnen naar links */
+  }
 
-form button {
-  margin-top: 15px;
-  padding: 10px;
-  background: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+  .logo {
+    margin-bottom: 10px; /* Ruimte onder het logo */
+  }
 
-form button:hover {
-  background: #555;
-}
+  nav {
+    flex-direction: column; /* Stapel navigatie items op elkaar */
+    align-items: center; /* Centraal uitlijnen */
+  }
 
-.logo {
-  max-width: 190px; 
-  height: auto;
-  margin-right: 20px; /* Voeg ruimte toe tussen het logo en de navigatie */
+  nav a {
+    margin: 5px 0; /* Ruimte tussen navigatie-items */
+  }
+
+  .cta-button {
+    width: 100%; /* Maak de knop breed op smartphones */
+  }
+
+  footer {
+    font-size: 0.8em; /* Kleinere tekstgrootte in de footer */
+  }
 }
