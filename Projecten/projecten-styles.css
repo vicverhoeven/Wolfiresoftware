@@ -1,0 +1,211 @@
+/* Algemene reset voor marges en padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  margin: 0; /* Verwijder marges van main */
+  padding: 0; /* Verwijder padding van main */
+  width: 100%; /* Zorg ervoor dat de main de volledige breedte gebruikt */
+}
+
+html, body {
+  margin: 0;     /* Verwijder marges van html en body */
+  padding: 0;    /* Verwijder padding van html en body */
+  width: 100%;   /* Zorg ervoor dat de body de volledige breedte gebruxsikt */
+  
+}
+
+
+.main-content {
+  text-align: center; /* Centraal uitlijnen */
+  margin: 0; /* Verwijder marge */
+  padding: 0; /* Verwijder padding */
+}
+
+.main-content h1 {
+  font-size: 24px; /* Pas de grootte van de tekst aan */
+  margin-bottom: 10px; /* Ruimte onder de titel */
+}
+
+.main-content img {
+  max-width: 100%; /* Zorg ervoor dat de afbeelding responsief is */
+  height: auto; /* Houd de aspect ratio */
+}
+
+/* Announcement Bar styling */
+.announcement-bar {
+  background-image: url("../images/mac.png");
+  color: #dbdbdb; /* Tekstkleur */
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Voeg schaduw toe */
+  position: relative; /* Zorg ervoor dat de schaduw goed werkt */
+  z-index: 10; 
+}
+
+/* Phone Line styling */
+.phone-line {
+  background-color: #ffffff; /* Lichte achtergrondkleur */
+  color: #333; /* Tekstkleur */
+  padding: 5px;
+  display: flex; /* Gebruik flexbox voor betere uitlijning */
+  align-items: center; /* Zorg ervoor dat de items verticaal gecentreerd zijn */
+  justify-content: end;
+}
+
+.contact-button {
+  margin-left: 10px; /* Voeg wat ruimte toe tussen het telefoonnummer en de knop */
+  padding: 8px 15px; /* Voeg padding toe voor de knop */
+  color: #333; /* Tekstkleur voor de knop */
+  text-decoration: none; /* Verwijder onderstreping */
+  border-radius: 4px; /* Maak de hoeken van de knop afgerond */
+}
+
+
+.contact-button:hover {
+  color: #e7a014;
+}
+
+header {
+  background: #fff; /* Header kleur */
+  padding: 8px;
+  display: flex; 
+  align-items: center; 
+  position:sticky; /* Dit zorgt ervoor dat de header vast blijft staan */
+            top: 0;
+            z-index: 1000; 
+}
+
+.logo {
+  max-width: 200px; 
+  height: auto;
+  margin-right: 20px; 
+}
+
+/* Navigatiebalk styling */
+nav {
+  display: flex;
+  justify-content: center; 
+  flex-grow: 1;
+  margin-left: 1%; 
+}
+
+nav a {
+  color: #2d2820; /* Zwarte tekstkleur voor navigatie */
+  padding: 10px 15px;
+  font-size: 1.5em;
+  text-decoration: none;
+  margin: 0 30px;
+}
+
+nav a:hover {
+  color: #e7a014;
+}
+
+
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p, ul {
+  font-size: 1em;
+  color: #555;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  background: #fff;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.mobile-image {
+  display: none; /* Verberg mobiele afbeelding standaard */
+}
+
+
+
+
+/* Basis stijlen blijven zoals ze zijn */
+
+/* Media query voor tablets */
+@media (max-width: 768px) {
+  .diensten-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolommen op tablets */
+  }
+
+  nav a {
+    font-size: 1.2em; /* Kleinere tekstgrootte voor navigatie */
+    margin: 0 15px; /* Verminder de marge tussen navigatie-items */
+  }
+
+  .cta-button {
+    padding: 12px 25px; /* Kleinere padding voor de knop */
+    font-size: 16px; /* Kleinere tekstgrootte voor de knop */
+  }
+
+  .dienst-box h3 {
+    font-size: 18px; /* Kleinere titelgrootte in de box */
+  }
+
+  .dienst-box p {
+    font-size: 14px; /* Kleinere beschrijvinggrootte */
+  }
+
+
+}
+
+/* Media query voor smartphones */
+@media (max-width: 480px) {
+  .diensten-grid {
+    grid-template-columns: 1fr; /* 1 kolom op smartphones */
+  }
+
+  header {
+    flex-direction: column; /* Stapel header elementen op elkaar */
+    align-items: flex-start; /* Uitlijnen naar links */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Ruimte onder het logo */
+  }
+
+  nav {
+    flex-direction: column; /* Stapel navigatie items op elkaar */
+    align-items: center; /* Centraal uitlijnen */
+  }
+
+  nav a {
+    margin: 5px 0; /* Ruimte tussen navigatie-items */
+  }
+
+  .cta-button {
+    width: 100%; /* Maak de knop breed op smartphones */
+  }
+
+  footer {
+    font-size: 0.8em; /* Kleinere tekstgrootte in de footer */
+  }
+
+
+}

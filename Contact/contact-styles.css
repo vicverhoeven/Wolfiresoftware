@@ -1,61 +1,67 @@
-/* Basis styling */
+/* Algemene reset voor marges en padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  html, body {
-    height: 100%;  /* Zorg ervoor dat de body en html de volledige hoogte gebruiken */
-    margin: 0;     /* Verwijder marges van html en body */
-    padding: 0;    /* Verwijder padding van html en body */
-    width: 100%;   /* Zorg ervoor dat de body de volledige breedte gebruikt */
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-  /* Header styling */
-  header {
-    background: #fff;
-    padding: 8px;
-    text-align: center;  /* Zorg ervoor dat de header de volledige breedte gebruikt */
-    
-  }
+main {
+  margin: 0; /* Verwijder marges van main */
+  padding: 0; /* Verwijder padding van main */
+  width: 100%; /* Zorg ervoor dat de main de volledige breedte gebruikt */
+}
+
+html, body {
+  margin: 0;     /* Verwijder marges van html en body */
+  padding: 0;    /* Verwijder padding van html en body */
+  width: 100%;   /* Zorg ervoor dat de body de volledige breedte gebruxsikt */
   
-  .logo {
-    max-width: 190px; 
-    height: auto;
-  }
+}
+
+header {
+  background: #fff; /* Header kleur */
+  padding: 8px;
+  display: flex; 
+  align-items: center; 
+  position:sticky; /* Dit zorgt ervoor dat de header vast blijft staan */
+            top: 0;
+            z-index: 1000; 
+}
+
+.logo {
+  max-width: 200px; 
+  height: auto;
+  margin: 0 auto; 
+}
+
+nav {
+  display: flex; /* Gebruik flexbox voor navigatie-items */
+  gap: 15px; /* Ruimte tussen links */
+  position: absolute; /* Haal het nav-gedeelte uit de normale flow */
+  left: 20px;
+}
+
+nav a {
+  color: #2d2820; /* Zwarte tekstkleur voor navigatie */
+  padding: 10px 0px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #e7a014;
+}
   
   h1 {
     font-size: 2em;
     margin-top: 10px;
   }
   
-  /* Navigatiebalk styling */
-  nav {
-    display: flex;
-    justify-content: center;
-    background-color: #ffffff;
-    flex-grow: 1;  
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); /* Pas verticale offset aan */
-    position: relative; 
-    z-index: 10; 
-  }
-  
-  nav a {
-    color: #3a1764; /* Zwarte tekstkleur voor navigatie */
-    padding: 10px 15px;
-    font-size: 1.5em;
-    text-decoration: none;
-    margin: 0 30px;
-  }
-  
-  nav a:hover {
-    color: #7a46da;
-  }
   
   /* Contact Sectie styling */
   #contact {
+    margin-top: 40px;
     margin-bottom: 40px;
     padding: 20px;
     /* background-image: url("../images/background.png"); */

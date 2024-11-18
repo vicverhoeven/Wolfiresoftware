@@ -16,7 +16,41 @@ html, body {
   margin: 0;     /* Verwijder marges van html en body */
   padding: 0;    /* Verwijder padding van html en body */
   width: 100%;   /* Zorg ervoor dat de body de volledige breedte gebruxsikt */
-  
+
+}
+
+header {
+  background: #ffffff; /* Header kleur */
+  padding: 8px;
+  display: flex; 
+  align-items: center; 
+  position:sticky; /* Dit zorgt ervoor dat de header vast blijft staan */
+            top: 0;
+            z-index: 1000; 
+}
+
+.logo {
+  max-width: 200px; 
+  height: auto;
+  margin: 0 auto; 
+}
+
+nav {
+  display: flex; /* Gebruik flexbox voor navigatie-items */
+  gap: 15px; /* Ruimte tussen links */
+  position: absolute; /* Haal het nav-gedeelte uit de normale flow */
+  left: 20px;
+}
+
+nav a {
+  color: #2d2820; /* Zwarte tekstkleur voor navigatie */
+  padding: 10px 0px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #e7a014;
 }
 
 
@@ -67,44 +101,13 @@ html, body {
 
 
 .contact-button:hover {
-  color: #7a46da;
+  color: #e7a014;
 }
 
-header {
-  background: #fff; /* Header kleur */
-  padding: 8px;
-  display: flex; 
-  align-items: center; 
-  position:sticky; /* Dit zorgt ervoor dat de header vast blijft staan */
-            top: 0;
-            z-index: 1000; 
-}
 
-.logo {
-  max-width: 200px; 
-  height: auto;
-  margin-right: 20px; 
-}
 
 /* Navigatiebalk styling */
-nav {
-  display: flex;
-  justify-content: center; 
-  flex-grow: 1;
-  margin-left: 1%; 
-}
 
-nav a {
-  color: #3a1764; /* Zwarte tekstkleur voor navigatie */
-  padding: 10px 15px;
-  font-size: 1.5em;
-  text-decoration: none;
-  margin: 0 30px;
-}
-
-nav a:hover {
-  color: #7a46da;
-}
 
 
 section {
@@ -184,7 +187,7 @@ ul {
 .cta-button {
   display: inline-block; /* Zorg ervoor dat de knop als een blok wordt weergegeven */
   padding: 15px 30px; /* Ruimte binnen de knop */
-  background-color: #007BFF; /* Achtergrondkleur van de knop */
+  background-color: #cba50e; /* Achtergrondkleur van de knop */
   color: white; /* Tekstkleur */
   text-decoration: none; /* Geen onderstreping */
   border-radius: 5px; /* Afgeronde hoeken */
@@ -193,7 +196,7 @@ ul {
 }
 
 .cta-button:hover {
-  background-color: #0056b3; /* Donkerdere kleur bij hover */
+  background-color: #c18204; /* Donkerdere kleur bij hover */
 }
 
 /* Footer styling */
@@ -207,6 +210,11 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+.mobile-image {
+  display: none; /* Verberg mobiele afbeelding standaard */
+}
+
 
 
 
@@ -235,6 +243,16 @@ footer {
   .dienst-box p {
     font-size: 14px; /* Kleinere beschrijvinggrootte */
   }
+
+  .desktop-image {
+    display: none; /* Verberg desktop afbeelding op kleinere schermen */
+}
+
+.mobile-image {
+    display: block; /* Toon mobiele afbeelding op kleinere schermen */
+    max-width: 100%; /* Zorg ervoor dat de afbeelding responsief is */
+    height: auto; /* Houd de aspect ratio */
+}
 }
 
 /* Media query voor smartphones */
@@ -268,4 +286,14 @@ footer {
   footer {
     font-size: 0.8em; /* Kleinere tekstgrootte in de footer */
   }
+
+  .desktop-image {
+    display: none; /* Verberg desktop afbeelding op kleinere schermen */
+}
+
+.mobile-image {
+    display: block; /* Toon mobiele afbeelding op kleinere schermen */
+    max-width: 100%; /* Zorg ervoor dat de afbeelding responsief is */
+    height: auto; /* Houd de aspect ratio */
+}
 }

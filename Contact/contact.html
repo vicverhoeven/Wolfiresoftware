@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="theme-color" content="#7039fa">
+  <!-- <meta name="theme-color" content="#7039fa"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Wolfire Software</title>
+  <link rel="icon" type="image/x-icon" href="../images/wolf.jpg">
   <link rel="stylesheet" href="contact-styles.css">
 </head>
 <body>
@@ -14,14 +15,14 @@
   </header>
 
   <!-- Navigatiebalk -->
-  <nav>
-    <a href="../Main_page/index.html">Home</a>
-    <a href="../Over_ons/over-ons.html">Over Ons</a>
-    <a href="#services">Diensten</a>
-    <a href="#projects">Projecten</a>
-    <a href="../Contact/contact.html">Contact</a>
-  </nav>
-  <h1>Contact</h1>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="../Main_page/index.html">Home</a>
+      <a href="../Projecten/projecten.html">Projecten</a>
+      <a href="../Contact/contact.html">Contact</a>
+    </nav>
+  </header>
 
   <!-- Main Content -->
   <main>
@@ -31,17 +32,11 @@
       <p>Neem contact op voor een vrijblijvend gesprek. Vul het formulier in, en wij nemen zo snel mogelijk contact met je op.</p>
       
       <!-- Contactformulier -->
-      <form action="submit_form.php" method="post">
-        <label for="name">Naam:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Bericht:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Verstuur</button>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Naam" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <textarea name="message" placeholder="Bericht" required></textarea>
+        <button type="submit">Verzenden</button>
       </form>
     </section>
   </main>
@@ -50,5 +45,31 @@
   <footer>
     <p>&copy; 2024 Wolfire Software. Alle rechten voorbehouden.</p>
   </footer>
+<!-- Laad de EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  // Initialiseer EmailJS met je public key (vervang met je eigen public key)
+  emailjs.init("S9UADu1yacN0_ZEgs");  // Vervang "your_public_key" met de juiste public key
+
+  // Wacht tot de DOM volledig geladen is voordat je de event listener toevoegt
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contact-form");
+
+    // Voeg een event listener toe voor het submit event
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();  // Voorkom dat het formulier standaard wordt verzonden
+
+      // Verzenden via EmailJS
+      emailjs.sendForm("wolfire-software", "template_ute5rxm", this)
+        .then(function(response) {
+          console.log("E-mail succesvol verzonden", response);
+          alert("Je bericht is succesvol verzonden! Bedankt voor je contact.");
+        }, function(error) {
+          console.error("Fout bij verzenden van e-mail", error);
+        });
+    });
+  });
+</script>
 </body>
 </html>
