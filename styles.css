@@ -1,0 +1,335 @@
+/* Algemene reset voor marges en padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+header {
+  background: #ffffff;
+  padding: 20px;
+  display: flex; 
+  align-items: center; 
+  position: sticky; 
+  top: 0;
+  z-index: 1000; 
+  transition: padding 0.1s ease, background-color 0.1s ease;
+}
+
+header.scrolled {
+  padding: 10px; /* Maak de header dunner */
+  background: #f8f8f8; /* Verander de achtergrondkleur */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Voeg een schaduw toe */
+}
+
+
+.logo {
+  max-width: 200px; 
+  height: auto;
+  margin: 0 auto; 
+}
+
+
+nav {
+  display: flex; 
+  gap: 15px; 
+  position: absolute; 
+  left: 20px;
+}
+
+nav a {
+  color: #2d2820; 
+  padding: 10px 0;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #e7a014;
+}
+
+.main-content {
+  text-align: center; 
+}
+
+.main-content h1 {
+  font-size: 24px; 
+  margin-bottom: 10px; 
+}
+
+.main-content img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+/* Announcement Bar styling */
+.announcement-bar {
+  background-image: url("../images/mac.png");
+  color: #dbdbdb; 
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); 
+  position: relative; 
+  z-index: 10; 
+}
+
+
+.contact-button {
+  margin-left: 10px; 
+  padding: 8px 15px; 
+  color: #333; 
+  text-decoration: none; 
+  border-radius: 4px; 
+}
+
+.contact-button:hover {
+  color: #e7a014;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p, ul {
+  font-size: 1em;
+  color: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.diensten {
+  margin: 40px 0; 
+  text-align: center; 
+}
+
+.diensten h2 {
+  font-size: 28px; 
+  margin-bottom: 20px; 
+}
+
+.diensten-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  padding: 0 20px; 
+}
+
+.dienst-box {
+  background-color: #f9f9f9; 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.dienst-box img {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dienst-box img:hover {
+  transform: scale(1.03); 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.dienst-box h3 {
+  font-size: 20px; 
+  margin: 10px 0; 
+}
+
+.dienst-box p {
+  font-size: 16px; 
+}
+
+.cta {
+  text-align: center; 
+  margin: 40px 0; 
+}
+
+.cta-button {
+  display: inline-block; 
+  padding: 15px 30px; 
+  background-color: #cba50e; 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 5px; 
+  font-size: 18px; 
+  transition: background-color 0.3s; 
+}
+
+.cta-button:hover {
+  background-color: #c18204; 
+}
+
+/* Footer styling */
+footer {
+  text-align: center; 
+  margin-top: 40px; 
+  font-size: 0.9em;
+  background: #fff; 
+  padding: 10px;
+  position: relative; 
+  width: 100%; 
+}
+
+.mobile-image {
+  display: none; 
+}
+
+.hamburger {
+  display: none; 
+  font-size: 30px; 
+  cursor: pointer; 
+}
+
+/* Dropdown inhoud (verborgen standaard) */
+.dropdown-content {
+  display: none; 
+  flex-direction: column; 
+  position: absolute; 
+  background-color: #ffffff; 
+  min-width: 160px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #2d2820; 
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #e7a014; 
+  color: #f2f2f2;
+}
+
+.nav-links {
+  display: flex; 
+  gap: 15px; 
+}
+
+/* Media query voor tablets */
+@media (max-width: 768px) {
+  .diensten-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  nav a {
+    font-size: 1.2em; 
+    margin: 0 15px; 
+  }
+
+  .cta-button {
+    padding: 12px 25px; 
+    font-size: 16px; 
+  }
+
+  .dienst-box h3 {
+    font-size: 18px; 
+  }
+
+  .dienst-box p {
+    font-size: 14px; 
+  }
+
+  .desktop-image {
+    display: none; 
+  }
+
+  .mobile-image {
+    display: block; 
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .hamburger {
+    display: block; 
+  }
+
+  .nav-links {
+    display: none; 
+  }
+
+  .dropdown-content {
+    margin-left: -20px;
+    margin-top: 40px; 
+  }
+}
+
+/* Media query voor smartphones */
+@media (max-width: 480px) {
+  .diensten-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  header {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .logo {
+    margin-bottom: 10px; 
+  }
+
+  nav {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  nav a {
+    margin: 5px 0; 
+  }
+
+  .cta-button {
+    width: 100%; 
+  }
+
+  footer {
+    font-size: 0.8em; 
+  }
+
+  .desktop-image {
+    display: none; 
+  }
+
+  .mobile-image {
+    display: block; 
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .hamburger {
+    display: block; 
+  }
+
+  .nav-links {
+    display: none; 
+  }
+
+  .dropdown-content {
+    position: absolute; 
+    top: 10px; 
+    right: 200px; 
+  }
+}
