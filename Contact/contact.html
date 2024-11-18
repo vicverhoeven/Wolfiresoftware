@@ -9,20 +9,15 @@
   <link rel="stylesheet" href="contact-styles.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <img src="../images/logo.png" alt="Wolfire Logo" class="logo">
-  </header>
 
-  <!-- Navigatiebalk -->
-  <!-- Header -->
-  <header>
-    <nav>
-      <a href="../Main_page/index.html">Home</a>
-      <a href="../Projecten/projecten.html">Projecten</a>
-      <a href="../Contact/contact.html">Contact</a>
-    </nav>
-  </header>
+<header>
+  <img src="../images/logo.png" alt="Wolfire Logo" class="logo">
+  <nav>
+    <a href="../Main_page/index.html">Home</a>
+    <a href="../Projecten/projecten.html">Projecten</a>
+    <a href="../Contact/contact.html">Contact</a>
+  </nav>
+</header>
 
   <!-- Main Content -->
   <main>
@@ -46,30 +41,11 @@
     <p>&copy; 2024 Wolfire Software. Alle rechten voorbehouden.</p>
   </footer>
 <!-- Laad de EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-<script type="text/javascript">
-  // Initialiseer EmailJS met je public key (vervang met je eigen public key)
-  emailjs.init("S9UADu1yacN0_ZEgs");  // Vervang "your_public_key" met de juiste public key
+    <script src="mailjs.js" type="text/javascript"></script>
 
-  // Wacht tot de DOM volledig geladen is voordat je de event listener toevoegt
-  document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("contact-form");
 
-    // Voeg een event listener toe voor het submit event
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();  // Voorkom dat het formulier standaard wordt verzonden
-
-      // Verzenden via EmailJS
-      emailjs.sendForm("wolfire-software", "template_ute5rxm", this)
-        .then(function(response) {
-          console.log("E-mail succesvol verzonden", response);
-          alert("Je bericht is succesvol verzonden! Bedankt voor je contact.");
-        }, function(error) {
-          console.error("Fout bij verzenden van e-mail", error);
-        });
-    });
-  });
-</script>
 </body>
 </html>
+

@@ -20,13 +20,13 @@ html, body {
 }
 
 header {
-  background: #fff; /* Header kleur */
-  padding: 8px;
+  background: #ffffff;
+  padding: 20px;
   display: flex; 
   align-items: center; 
-  position:sticky; /* Dit zorgt ervoor dat de header vast blijft staan */
-            top: 0;
-            z-index: 1000; 
+  position: sticky; 
+  top: 0;
+  z-index: 1000; 
 }
 
 .logo {
