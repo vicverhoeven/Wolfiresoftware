@@ -99,6 +99,10 @@ nav a:hover {
     border-radius: 4px;
     width: 100%;
   }
+
+  form textarea {
+    padding-bottom: 70px;
+  }
   
   form button {
     padding: 10px 15px;
