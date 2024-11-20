@@ -19,6 +19,7 @@ header {
   padding: 20px;
   display: flex; 
   align-items: center; 
+  justify-content: center; 
   position: sticky; 
   top: 0;
   z-index: 1000; 
@@ -40,10 +41,10 @@ header.scrolled {
 
 
 nav {
+  position: absolute; /* Dit zorgt ervoor dat de navigatie niet de uitlijning van het logo beïnvloedt */
+  left: 20px;
   display: flex; 
   gap: 15px; 
-  position: absolute; 
-  left: 20px;
 }
 
 nav a {
