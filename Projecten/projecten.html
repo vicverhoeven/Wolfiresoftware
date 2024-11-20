@@ -14,9 +14,19 @@
   <header>
     <img src="../images/logo.png" alt="Wolfire Logo" class="logo">
     <nav>
-      <a href="../index.html">Home</a>
-      <a href="../Projecten/projecten.html">Projecten</a>
-      <a href="../Contact/contact.html">Contact</a>
+      <div class="hamburger" onclick="toggleMenu()">
+        &#9776; <!-- Hamburger icon -->
+      </div>
+      <div class="dropdown-content" id="dropdown-menu">
+        <a href="../index.html">Home</a>
+        <a href="../Projecten/projecten.html">Projecten</a>
+        <a href="../Contact/contact.html">Contact</a>
+      </div>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../Projecten/projecten.html">Projecten</a>
+        <a href="../Contact/contact.html">Contact</a>
+      </div>
     </nav>
   </header>
 
@@ -33,10 +43,12 @@
     </section>
 
     <section class="project-item">
-      <h2>Wolfire Kledingwinkel</h2>
-      <p>De Wolfire Kledingwinkel is onze eigen kledinglijn geïnspireerd door snelheid en stijl. Van unieke t-shirts tot hoogwaardige merchandise, onze winkel biedt iets voor iedereen die van racen en auto's houdt.</p>
+      <h2>WOLFIRE Clothing</h2>
+      <p>Dit is onze eigen kledinglijn geïnspireerd door luxe en stijl. Van unieke t-shirts tot hoogwaardige merchandise, onze winkel biedt iets voor iedereen die van luxe houdt.</p>
       <img src="../images/Pits1.jpeg" alt="Wolfire Kledingwinkel" class="project-image">
-      <a href="https://www.wolfire.be" class="cta-button" target="_blank" rel="noopener noreferrer">Bezoek Winkel</a>
+      <div class="cta-container">
+        <a href="https://www.wolfire.be" class="cta-button" target="_blank" rel="noopener noreferrer">Bezoek Winkel</a>
+      </div>
     </section>
   </main>
 
@@ -44,5 +56,6 @@
   <footer>
     <p>&copy; 2024 Wolfire Software. Alle rechten voorbehouden.</p>
   </footer>
+  <script src="../dropdownmenu.js"></script>
 </body>
 </html>
