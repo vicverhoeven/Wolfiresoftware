@@ -284,14 +284,8 @@ footer {
     grid-template-columns: 1fr; 
   }
 
-  header {
-    flex-direction: column; 
-    align-items: flex-start; 
-  }
 
-  .logo {
-    margin-bottom: 10px; 
-  }
+
 
   nav {
     flex-direction: column; 
