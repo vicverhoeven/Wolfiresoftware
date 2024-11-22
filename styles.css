@@ -40,7 +40,6 @@ header.scrolled {
 }
 
 
-/* nav elementen */
 nav {
   position: absolute; /* Dit zorgt ervoor dat de navigatie niet de uitlijning van het logo beïnvloedt */
   left: 20px;
@@ -53,35 +52,11 @@ nav a {
   padding: 10px 0;
   font-size: 1.2em;
   text-decoration: none;
-  font-family: 'Montreal', sans-serif;
-  position: relative; /* Zorg ervoor dat de onderlijn goed gepositioneerd kan worden */
 }
 
-nav a::after {
-  content: '';
-  display: block;
-  height: 2px; /* Dikte van de onderlijn */
-  background: #e7a014; /* Kleur van de onderlijn */
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px; /* Plaats de onderlijn onder de tekst */
-  transform: scaleX(0); /* Begin met een schaal van 0 (niet zichtbaar) */
-  transition: transform 0.3s ease; /* Animatie voor de onderlijn */
-}
-
-nav a:hover::after,
-nav.scrolled a::after {
-  transform: scaleX(1); /* Maak de onderlijn zichtbaar */
-}
-
-nav.scrolled a:hover {
+nav a:hover {
   color: #e7a014;
-  text-decoration: underline;
-  text-underline-offset: 0; /* Zet dit op 0 om de onderlijn direct onder de tekst te houden */
 }
-
-
 
 .main-content {
   text-align: center; 
@@ -161,6 +136,7 @@ ul {
 .dienst-box {
   background-color: #f9f9f9; 
   border-radius: 10px; 
+  padding: 20px; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
@@ -172,7 +148,7 @@ ul {
 }
 
 .dienst-box img:hover {
-  transform: scale(0.98);
+  transform: scale(1.03); 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
 
@@ -214,28 +190,6 @@ footer {
   padding: 10px;
   position: relative; 
   width: 100%; 
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: space-between;
-  gap: 10px;
-}
-
-footer ul li {
-  display: inline;
-}
-
-footer ul li a {
-  text-decoration: none;
-  color: inherit; /* Past de tekstkleur van de link aan aan de stijl van de footer */
-}
-
-footer ul li a:hover {
-  text-decoration: underline; /* Optioneel, voor een hover-effect */
 }
 
 .mobile-image {
@@ -329,6 +283,9 @@ footer ul li a:hover {
   .diensten-grid {
     grid-template-columns: 1fr; 
   }
+
+
+
 
   nav {
     flex-direction: column; 
