@@ -192,6 +192,28 @@ footer {
   width: 100%; 
 }
 
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: space-between;
+  gap: 10px;
+}
+
+footer ul li {
+  display: inline;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: inherit; /* Past de tekstkleur van de link aan aan de stijl van de footer */
+}
+
+footer ul li a:hover {
+  text-decoration: underline; /* Optioneel, voor een hover-effect */
+}
+
 .mobile-image {
   display: none; 
 }

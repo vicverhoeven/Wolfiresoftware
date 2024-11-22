@@ -1,0 +1,216 @@
+/* Algemene reset voor marges en padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  html, body {
+    width: 100%;
+  }
+  
+  main {
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  
+  header {
+    background: #ffffff;
+    padding: 20px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+    transition: padding 0.1s ease, background-color 0.1s ease;
+  }
+  
+  header.scrolled {
+    padding: 10px; /* Maak de header dunner */
+    background: #f8f8f8; /* Verander de achtergrondkleur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Voeg een schaduw toe */
+  }
+  
+  
+  .logo {
+    max-width: 200px; 
+    height: auto;
+    margin: 0 auto; 
+  }
+  
+  
+  nav {
+    position: absolute; /* Dit zorgt ervoor dat de navigatie niet de uitlijning van het logo beïnvloedt */
+    left: 20px;
+    display: flex; 
+    gap: 15px; 
+  }
+  
+  nav a {
+    color: #2d2820; 
+    padding: 10px 0;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #e7a014;
+  }
+  
+  .main-content {
+    text-align: center; 
+  }
+  
+  .main-content h1 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+  }
+  
+  
+
+  
+  
+
+  
+  .contact-button:hover {
+    color: #e7a014;
+  }
+  
+  /* Section styling */
+  section {
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  p, ul {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+
+  
+  /* Footer styling */
+  footer {
+    text-align: center; 
+    margin-top: 40px; 
+    font-size: 0.9em;
+    background: #fff; 
+    padding: 10px;
+    position: relative; 
+    width: 100%; 
+  }
+  
+  .mobile-image {
+    display: none; 
+  }
+  
+  .hamburger {
+    display: none; 
+    font-size: 30px; 
+    cursor: pointer; 
+  }
+  
+  /* Dropdown inhoud (verborgen standaard) */
+  .dropdown-content {
+    display: none; 
+    flex-direction: column; 
+    position: absolute; 
+    background-color: #ffffff; 
+    min-width: 160px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #2d2820; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #e7a014; 
+    color: #f2f2f2;
+  }
+  
+  .nav-links {
+    display: flex; 
+    gap: 15px; 
+  }
+  
+  /* Media query voor tablets */
+  @media (max-width: 768px) {
+    main {
+      width: 100%;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  
+    nav a {
+      font-size: 1.2em; 
+      margin: 0 15px; 
+    }
+  
+    .hamburger {
+      display: block; 
+    }
+  
+    .nav-links {
+      display: none; 
+    }
+  
+    .dropdown-content {
+      margin-left: -20px;
+      margin-top: 40px; 
+    }
+  }
+  
+  /* Media query voor smartphones */
+  @media (max-width: 480px) {
+  
+    main {
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    nav {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    nav a {
+      margin: 5px 0; 
+    }
+  
+    footer {
+      font-size: 0.8em; 
+    }
+  
+  
+    .hamburger {
+      display: block; 
+    }
+  
+    .nav-links {
+      display: none; 
+    }
+  
+  
+    .dropdown-content {
+      margin-left: 90px;
+      margin-top: 40px; 
+    }
+  }
