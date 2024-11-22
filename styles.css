@@ -40,6 +40,7 @@ header.scrolled {
 }
 
 
+/* nav elementen */
 nav {
   position: absolute; /* Dit zorgt ervoor dat de navigatie niet de uitlijning van het logo beïnvloedt */
   left: 20px;
@@ -160,7 +161,6 @@ ul {
 .dienst-box {
   background-color: #f9f9f9; 
   border-radius: 10px; 
-  padding: 20px; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
@@ -172,7 +172,7 @@ ul {
 }
 
 .dienst-box img:hover {
-  transform: scale(1.03); 
+  transform: scale(0.98);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
 
