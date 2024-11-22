@@ -284,9 +284,6 @@ footer {
     grid-template-columns: 1fr; 
   }
 
-
-
-
   nav {
     flex-direction: column; 
     align-items: center; 
