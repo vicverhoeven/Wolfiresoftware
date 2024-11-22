@@ -52,11 +52,35 @@ nav a {
   padding: 10px 0;
   font-size: 1.2em;
   text-decoration: none;
+  font-family: 'Montreal', sans-serif;
+  position: relative; /* Zorg ervoor dat de onderlijn goed gepositioneerd kan worden */
 }
 
-nav a:hover {
-  color: #e7a014;
+nav a::after {
+  content: '';
+  display: block;
+  height: 2px; /* Dikte van de onderlijn */
+  background: #e7a014; /* Kleur van de onderlijn */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px; /* Plaats de onderlijn onder de tekst */
+  transform: scaleX(0); /* Begin met een schaal van 0 (niet zichtbaar) */
+  transition: transform 0.3s ease; /* Animatie voor de onderlijn */
 }
+
+nav a:hover::after,
+nav.scrolled a::after {
+  transform: scaleX(1); /* Maak de onderlijn zichtbaar */
+}
+
+nav.scrolled a:hover {
+  color: #e7a014;
+  text-decoration: underline;
+  text-underline-offset: 0; /* Zet dit op 0 om de onderlijn direct onder de tekst te houden */
+}
+
+
 
 .main-content {
   text-align: center; 
