@@ -107,45 +107,51 @@ nav.scrolled a:hover {
 .project-item {
   margin: 20px 0;
   padding: 20px;
-  background-color: #f9f9f9; /* Lichte achtergrondkle*/
-
+  background-color: #f9f9f9;
+  /* Lichte achtergrondkleur */
   border-radius: 8px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  /* Zorg ervoor dat de afbeelding en tekst goed zijn uitgelijnd */
+}
 
+.project-content {
+  display: flex;
+  /* Zorg ervoor dat de afbeelding en de knop naast elkaar staan */
+  align-items: center;
+  /* Centreer de items verticaal */
 }
 
 .project-item img {
   max-width: 150px;
+  /* Zorg ervoor dat de afbeelding niet te groot is */
   margin-right: 20px;
+  /* Voeg ruimte toe tussen de afbeelding en de tekst */
   border-radius: 8px;
 }
 
-.project-item h2 {
-  font-size: 1.5em;
-  color: #b99d7b; /* Oranje kleur */
-  margin-bottom: 10px;
-}
-
-.project-item p {
-  margin-left: 5px;
-  font-size: 1em;
-  color: #555; /* Donkergrijs voor tekst */
-  margin-bottom: 15px;
+.cta-container {
+  margin-top: 10px;
+  /* Voeg ruimte toe boven de knop */
 }
 
 .project-item .cta-button {
-  background: #979797; /* Oranje achtergrondkleur */
-  color: #fff; /* Witte tekstkleur */
+  background: #cccccc;
+  /* Grijze achtergrondkleur voor de knop */
+  color: #333;
+  /* Donkere tekstkleur */
   padding: 10px 20px;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0 .3s;
+  transition: background 0.3s;
+  display: inline-block;
+  /* Zorg ervoor dat de knop zich gedraagt als een inline-block */
 }
 
 .project-item .cta-button:hover {
-  background: #e7a014; /* Donkerder oranje bij hover */
+  background: #b3b3b3;
+  /* Donkerder grijze kleur bij hover */
 }
 
 /* Footer styling */
