@@ -44,27 +44,45 @@ header {
   margin: 0 auto;
 }
 
+
 nav {
-  position: absolute;
+  position: absolute; /* Dit zorgt ervoor dat de navigatie niet de uitlijning van het logo beïnvloedt */
   left: 20px;
-  display: flex;
-  margin-left: 25px; /* Voeg hier de gewenste margin toe */
+  display: flex; 
+  gap: 15px; 
 }
 
 nav a {
-  color: #2d2820;
+  color: #2d2820; 
   padding: 10px 0;
   font-size: 1.2em;
   text-decoration: none;
-  margin-right: 20px;
+  font-family: 'Montreal', sans-serif;
+  position: relative; /* Zorg ervoor dat de onderlijn goed gepositioneerd kan worden */
 }
 
-nav a:hover {
+nav a::after {
+  content: '';
+  display: block;
+  height: 2px; /* Dikte van de onderlijn */
+  background: #e7a014; /* Kleur van de onderlijn */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px; /* Plaats de onderlijn onder de tekst */
+  transform: scaleX(0); /* Begin met een schaal van 0 (niet zichtbaar) */
+  transition: transform 0.3s ease; /* Animatie voor de onderlijn */
+}
+
+nav a:hover::after,
+nav.scrolled a::after {
+  transform: scaleX(1); /* Maak de onderlijn zichtbaar */
+}
+
+nav.scrolled a:hover {
   color: #e7a014;
-}
-
-.main-content {
-  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 0; /* Zet dit op 0 om de onderlijn direct onder de tekst te houden */
 }
 
 
