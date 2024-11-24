@@ -52,13 +52,13 @@
         <div class="icon"><i class="fas fa-envelope"></i></div>
         <div class="text">
           <h3>Email</h3>
-          <p>Cas.marien@student.ucll.be</p>
+          <p>Wolfire.belgium@gmail.com</p>
         </div>
       </div>
     </article>
   
     <article class="contactForm">
-      <form>
+      <form id="contact-form"> <!-- Zorg ervoor dat het ID correct is -->
         <h2>Contacteer ons</h2>
         <div class="inputBox">
           <input type="text" name="name" required>
@@ -72,8 +72,8 @@
           <textarea name="message" required></textarea>
           <span>Type je bericht...</span>
         </div>
-        <div class="inputBox">
-          <input type="submit" value="Send">
+        <div class="send_button">
+          <input type="submit" value="Verstuur">
         </div>
       </form>
     </article>
@@ -86,7 +86,7 @@
     
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
    
-  <script src="mailjs.js" type="text/javascript"></script>
+  <script src="../Contact/mailjs.js" type="text/javascript"></script>
   <script src="../dropdownmenu.js"></script>
   <script src="from.js" type="text/javascript"></script>
 

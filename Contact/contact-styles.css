@@ -220,9 +220,21 @@ footer {
   cursor: pointer;
 }
 
+.send_button input[type="submit"] {
+  border: 2px solid #e7a014; /* Gouden rand */
+  color: #e7a014; /* Gouden tekst */
+  background-color: transparent; /* Transparante achtergrond voor contrast */
+  padding: 10px 20px; /* Ruimte rond de tekst */
+  border-radius: 5px; /* Ronde hoeken */
+  font-size: 16px; /* Grotere tekst */
+  cursor: pointer; /* Handcursor bij hover */
+  transition: 0.3s ease; /* Zachte overgang bij hover */
+}
 
-
-
+.send_button input[type="submit"]:active {
+  background-color: #e7a014; /* Gouden achtergrond bij klik */
+  color: rgb(35, 35, 35); /* Zwarte tekst bij klik */
+}
 
 .hamburger {
   display: none;
