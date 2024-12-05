@@ -113,7 +113,6 @@ footer {
 .contact .gegevens .box .icon {
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
-  padding: 20px;
   font-size: 18px;
 }
 
@@ -137,7 +136,6 @@ footer {
 
 .contactForm {
   width: 40%;
-  padding: 40px;
   background-color: rgb(255, 255, 255);
 }
 
@@ -299,6 +297,19 @@ footer {
     margin-left: -20px;
     margin-top: 40px;
   }
+
+  .contact {
+    flex-direction: column; /* Zorg ervoor dat de elementen onder elkaar staan */
+    align-items: center; /* Centreer de elementen */
+  }
+
+  .contact .gegevens {
+    margin-bottom: 20px; /* Voeg wat ruimte toe onder de gegevens */
+  }
+
+  .contactForm {
+    width: 100%; /* Zorg ervoor dat het formulier de volledige breedte gebruikt */
+  }
 }
 
 /* Media query voor smartphones */
@@ -339,24 +350,18 @@ footer {
   }
 
 
-  .project-item {
-    flex-direction: column;
-    /* Zorg ervoor dat de elementen onder elkaar staan */
-    align-items: center;
-    /* Centreer de elementen */
-    text-align: center;
-    /* Centreer de tekst */
+  .contact {
+    flex-direction: column; /* Zorg ervoor dat de elementen onder elkaar staan */
+    align-items: center; /* Centreer de elementen */
   }
 
-  .project-item img {
-    max-width: 100%;
-    /* Zorg ervoor dat de afbeelding responsief is */
-    margin-bottom: 10px;
-    /* Voeg wat ruimte toe onder de afbeelding */
+
+  .contactForm {
+    width: 100%; /* Zorg ervoor dat het formulier de volledige breedte gebruikt */
   }
 
-  .cta-container {
-    margin-top: 10px;
-    /* Voeg wat ruimte toe boven de button */
-  }
+
+  
+
+
 }

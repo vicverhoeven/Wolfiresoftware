@@ -184,6 +184,7 @@ ul {
   font-size: 16px; 
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .cta {
@@ -258,6 +259,7 @@ footer ul li a:hover {
   min-width: 160px; 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  padding-bottom: 5px;
 }
 
 .dropdown-content a {
@@ -267,10 +269,7 @@ footer ul li a:hover {
   display: block;
 }
 
-.dropdown-content a:hover {
-  background-color: #e7a014; 
-  color: #f2f2f2;
-}
+
 
 .nav-links {
   display: flex; 
