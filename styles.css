@@ -171,7 +171,7 @@ ul {
 }
 
 .dienst-box img:hover {
-  transform: scale(0.98); 
+  transform: scale(0.99); 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
 
@@ -195,16 +195,16 @@ ul {
 .cta-button {
   display: inline-block; 
   padding: 15px 30px; 
-  background-color: #cba50e; 
+  background-color: #e7a014; 
   color: white; 
   text-decoration: none; 
-  border-radius: 5px; 
+  border-radius: 1px; 
   font-size: 18px; 
   transition: background-color 0.3s; 
 }
 
 .cta-button:hover {
-  background-color: #e7a014; 
+  background-color: #595959; 
 }
 
 /* Footer styling */
@@ -212,8 +212,9 @@ footer {
   text-align: center; 
   margin-top: 40px; 
   font-size: 0.9em;
-  background: #fff; 
+  background: #ececec; 
   padding: 10px;
+  height: 100px;
   position: relative; 
   width: 100%; 
 }
@@ -221,19 +222,21 @@ footer {
 footer ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-  display: flex;
+  margin-top: 50px;
   align-items: space-between;
+
   gap: 10px;
 }
 
 footer ul li {
   display: inline;
+  margin-top: 100px;
 }
 
 footer ul li a {
   text-decoration: none;
   color: inherit; /* Past de tekstkleur van de link aan aan de stijl van de footer */
+  margin-inline: 10px;
 }
 
 footer ul li a:hover {
@@ -340,7 +343,8 @@ footer ul li a:hover {
   }
 
   .cta-button {
-    width: 100%; 
+    padding: 12px 25px; 
+    font-size: 16px; 
   }
 
   footer {

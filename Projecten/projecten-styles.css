@@ -113,6 +113,13 @@ nav.scrolled a:hover {
   display: flex;
   align-items: flex-start;
   /* Zorg ervoor dat de afbeelding en tekst goed zijn uitgelijnd */
+  flex-direction: column; /* Zorg ervoor dat de elementen onder elkaar staan */
+  align-items: center; /* Centreer de elementen */
+  text-align: center; /* Centreer de tekst */
+
+}
+.project-item p {
+  margin: 15px;
 }
 
 .project-content {
@@ -128,6 +135,8 @@ nav.scrolled a:hover {
   margin-right: 20px;
   /* Voeg ruimte toe tussen de afbeelding en de tekst */
   border-radius: 8px;
+  max-width: 60%; /* Zorg ervoor dat de afbeelding responsief is */
+  margin-bottom: 10px;
 }
 
 .cta-container {
@@ -231,6 +240,21 @@ nav a {
 .dropdown-content {
   margin-left: -20px;
   margin-top: 40px; 
+}
+
+.project-item {
+  flex-direction: column; /* Zorg ervoor dat de elementen onder elkaar staan */
+  align-items: center; /* Centreer de elementen */
+  text-align: center; /* Centreer de tekst */
+}
+
+.project-item img {
+  max-width: 100%; /* Zorg ervoor dat de afbeelding responsief is */
+  margin-bottom: 10px; /* Voeg wat ruimte toe onder de afbeelding */
+}
+
+.cta-container {
+  margin-top: 10px; /* Voeg wat ruimte toe boven de button */
 }
 }
 
