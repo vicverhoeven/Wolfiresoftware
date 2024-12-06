@@ -1,4 +1,3 @@
-/* Algemene reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,22 +7,20 @@
 
 html, body {
   width: 100%;
-  background-color: #ffffff; /* Lichte achtergrondkleur */
-  color: #333; /* Donkere tekstkleur */
+  background-color: #ffffff; 
+  color: #333; 
   line-height: 1.6;
 }
 
-/* Main styling */
 main {
   margin: 20px auto;
   padding: 20px;
   max-width: 1200px;
-  background-color: #ffffff; /* Witte achtergrond voor main */
+  background-color: #ffffff; 
   border-radius: 8px;
 
 }
 
-/* Header styling */
 header {
   background: #ffffff;
   padding: 20px;
@@ -41,7 +38,7 @@ header {
   margin: 0 auto; 
 }
 
-/* nav elementen */
+
 nav {
   position: absolute; /* Dit zorgt ervoor dat de navigatie niet de uitlijning van het logo beïnvloedt */
   left: 20px;
@@ -55,19 +52,19 @@ nav a {
   font-size: 1.2em;
   text-decoration: none;
   font-family: 'Montreal', sans-serif;
-  position: relative; /* Zorg ervoor dat de onderlijn goed gepositioneerd kan worden */
+  position: relative; 
 }
 
 nav a::after {
   content: '';
   display: block;
-  height: 2px; /* Dikte van de onderlijn */
-  background: #e7a014; /* Kleur van de onderlijn */
+  height: 2px; /* Dikte onderlijn */
+  background: #e7a014; 
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -5px; /* Plaats de onderlijn onder de tekst */
-  transform: scaleX(0); /* Begin met een schaal van 0 (niet zichtbaar) */
+  bottom: -5px; 
+  transform: scaleX(0); 
   transition: transform 0.3s ease; /* Animatie voor de onderlijn */
 }
 
@@ -87,7 +84,7 @@ nav.scrolled a:hover {
 }
 
 
-/* Project sections */
+
 .project-section {
   text-align: center;
   margin-bottom: 40px;
@@ -95,27 +92,25 @@ nav.scrolled a:hover {
 
 .project-section h1 {
   font-size: 2em;
-  color: #b99d7b; /* Oranje kleur */
+  color: #b99d7b; 
   margin-bottom: 10px;
 }
 
 .project-section p {
   font-size: 1.1em;
-  color: #555; /* Donkergrijs voor tekst */
+  color: #555; 
 }
 
 .project-item {
   margin: 20px 0;
   padding: 20px;
   background-color: #f9f9f9;
-  /* Lichte achtergrondkleur */
   border-radius: 8px;
   display: flex;
   align-items: flex-start;
-  /* Zorg ervoor dat de afbeelding en tekst goed zijn uitgelijnd */
-  flex-direction: column; /* Zorg ervoor dat de elementen onder elkaar staan */
-  align-items: center; /* Centreer de elementen */
-  text-align: center; /* Centreer de tekst */
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
 
 }
 .project-item p {
@@ -124,46 +119,36 @@ nav.scrolled a:hover {
 
 .project-content {
   display: flex;
-  /* Zorg ervoor dat de afbeelding en de knop naast elkaar staan */
   align-items: center;
-  /* Centreer de items verticaal */
 }
 
 .project-item img {
   max-width: 150px;
-  /* Zorg ervoor dat de afbeelding niet te groot is */
   margin-right: 20px;
-  /* Voeg ruimte toe tussen de afbeelding en de tekst */
   border-radius: 8px;
-  max-width: 60%; /* Zorg ervoor dat de afbeelding responsief is */
+  max-width: 60%; 
   margin-bottom: 10px;
 }
 
 .cta-container {
   margin-top: 10px;
-  /* Voeg ruimte toe boven de knop */
 }
 
 .project-item .cta-button {
   background: #cccccc;
-  /* Grijze achtergrondkleur voor de knop */
   color: #333;
-  /* Donkere tekstkleur */
   padding: 10px 20px;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s;
   display: inline-block;
-  /* Zorg ervoor dat de knop zich gedraagt als een inline-block */
 }
 
 .project-item .cta-button:hover {
   background: #b3b3b3;
-  /* Donkerder grijze kleur bij hover */
 }
 
-/* Footer styling */
 footer {
   text-align: center; 
   margin-top: 40px; 
@@ -184,7 +169,6 @@ footer {
   cursor: pointer; 
 }
 
-/* Dropdown inhoud (verborgen standaard) */
 .dropdown-content {
   display: none; 
   flex-direction: column; 
@@ -243,22 +227,21 @@ nav a {
 }
 
 .project-item {
-  flex-direction: column; /* Zorg ervoor dat de elementen onder elkaar staan */
-  align-items: center; /* Centreer de elementen */
-  text-align: center; /* Centreer de tekst */
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
 }
 
 .project-item img {
-  max-width: 100%; /* Zorg ervoor dat de afbeelding responsief is */
-  margin-bottom: 10px; /* Voeg wat ruimte toe onder de afbeelding */
+  max-width: 100%; 
+  margin-bottom: 10px; 
 }
 
 .cta-container {
-  margin-top: 10px; /* Voeg wat ruimte toe boven de button */
+  margin-top: 10px; 
 }
 }
 
-/* Media query voor smartphones */
 @media (max-width: 480px) {
 
 
@@ -299,17 +282,17 @@ footer {
 
 
 .project-item {
-  flex-direction: column; /* Zorg ervoor dat de elementen onder elkaar staan */
-  align-items: center; /* Centreer de elementen */
-  text-align: center; /* Centreer de tekst */
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
 }
 
 .project-item img {
-  max-width: 100%; /* Zorg ervoor dat de afbeelding responsief is */
-  margin-bottom: 10px; /* Voeg wat ruimte toe onder de afbeelding */
+  max-width: 100%; 
+  margin-bottom: 10px; 
 }
 
 .cta-container {
-  margin-top: 10px; /* Voeg wat ruimte toe boven de button */
+  margin-top: 10px; 
 }
 }
