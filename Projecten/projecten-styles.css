@@ -59,7 +59,7 @@ nav a::after {
   content: '';
   display: block;
   height: 2px; /* Dikte onderlijn */
-  background: #e7a014; 
+  background: #b99d7b; 
   position: absolute;
   left: 0;
   right: 0;
@@ -74,7 +74,8 @@ nav.scrolled a::after {
 }
 
 nav.scrolled a:hover {
-  color: #e7a014;
+  /* color: #e7a014; */
+  color: #b99d7b;
   text-decoration: underline;
   text-underline-offset: 0; /* Zet dit op 0 om de onderlijn direct onder de tekst te houden */
 }
