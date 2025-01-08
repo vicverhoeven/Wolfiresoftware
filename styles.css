@@ -195,7 +195,7 @@ ul {
 .cta-button {
   display: inline-block; 
   padding: 15px 30px; 
-  background-color: #e7a014; 
+  background-color: #b99d7b; 
   color: white; 
   text-decoration: none; 
   border-radius: 1px; 
@@ -204,7 +204,7 @@ ul {
 }
 
 .cta-button:hover {
-  background-color: #595959; 
+  background-color: #767474; 
 }
 
 /* Footer styling */

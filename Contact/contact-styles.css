@@ -142,7 +142,7 @@ footer {
 .contactForm h2 {
   font-size: 30px;
   font-weight: 500;
-  color: #e7a014;
+  color: #b99d7b;
 }
 
 .contactForm .inputBox {
@@ -165,13 +165,13 @@ footer {
 .contactForm .inputBox input:focus~span {
   font-size: 14px;
   transform: translateY(-25px);
-  color: #e7a014;
+  color: #b99d7b;
 }
 
 .contactForm .inputBox input:valid~span {
   font-size: 14px;
   transform: translateY(-25px);
-  color: #e7a014;
+  color: #b99d7b;
 }
 
 .contactForm .inputBox textarea {
@@ -189,13 +189,13 @@ footer {
 .contactForm .inputBox textarea:focus~span {
   font-size: 14px;
   transform: translateY(-28px);
-  color: #e7a014;
+  color: #b99d7b;
 }
 
 .contactForm .inputBox textarea:valid~span {
   font-size: 14px;
   transform: translateY(-28px);
-  color: #e7a014;
+  color: #b99d7b;
 }
 
 .contactForm .inputBox span {
@@ -219,8 +219,8 @@ footer {
 }
 
 .send_button input[type="submit"] {
-  border: 2px solid #e7a014; /* Gouden rand */
-  color: #e7a014; /* Gouden tekst */
+  border: 2px solid #b99d7b; /* Gouden rand */
+  color: #b99d7b; /* Gouden tekst */
   background-color: transparent; /* Transparante achtergrond voor contrast */
   padding: 10px 20px; /* Ruimte rond de tekst */
   border-radius: 5px; /* Ronde hoeken */
@@ -230,7 +230,7 @@ footer {
 }
 
 .send_button input[type="submit"]:active {
-  background-color: #e7a014; /* Gouden achtergrond bij klik */
+  background-color: #b99d7b; /* Gouden achtergrond bij klik */
   color: rgb(35, 35, 35); /* Zwarte tekst bij klik */
 }
 
