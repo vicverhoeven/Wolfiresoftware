@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+  }
+  
+  .container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+  }
+  
+  .left {
+    flex: 1;
+    padding: 0 50px;
+    margin-left: 12rem;
+    display: flex;
+    flex-direction: column; /* Zorgt dat elementen gestapeld worden */
+    align-items: flex-start; /* Zorgt dat alles links uitgelijnd blijft */
+  }
+
+  .left h1 {
+    font-size: 8rem;
+    margin: 0;
+  }
+  
+  .logo {
+    width: 300px;
+  }
+  
+  
+  .cta {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: transparent;
+    color: rgb(255, 255, 0);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    border: 3px solid #f0c800; 
+  }
+
+
+  
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    width: 50%;
+    max-width: 500px;
+    margin-right: 20rem;
+  }
+
+
+  /* deel 2 */
+
+  .white-section1-container {
+    background-color: white; /* Witte achtergrond */
+    color: black; /* Tekstkleur */
+    padding: 50px; /* Ruimte rondom de inhoud */
+    text-align: center; /* Centreer de tekst */
+
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Twee kolommen */
+    grid-template-rows: 1fr 1fr; /* Twee rijen */
+    grid-gap: 10px; /* Ruimte tussen de grid-items */
+    height: 700px; /* Stel een hoogte in voor de container */
+    position: relative;
+    padding: 20px; /* Ruimte binnen de grid container */
+    border: 2px solid black; /* Zwarte omtrek rondom de grid container */
+    border-radius: 10px; /* Afronden van de hoeken van de grid container */
+  }
+  
+  .top-left {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start; /* Positioneer het element linksboven */
+    margin: 0;
+  }
+  
+  .bottom-right {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end; /* Positioneer het element rechtsonder */
+  }
+  
+  .top-right {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end; /* Positioneer het element rechtsboven */
+    width: 1000px; /* Grotere afbeelding */
+    height: auto; /* Zorg ervoor dat de verhoudingen van de afbeelding behouden blijven */
+  }
+  
+  .grid-container img {
+    max-width: 100%; /* Zorg ervoor dat de afbeelding niet groter wordt dan de container */
+  }
