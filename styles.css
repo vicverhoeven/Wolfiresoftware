@@ -32,13 +32,11 @@ header.scrolled {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Voeg een schaduw toe */
 }
 
-
 .logo {
   max-width: 200px; 
   height: auto;
   margin: 0 auto; 
 }
-
 
 nav {
   position: absolute; /* Dit zorgt ervoor dat de navigatie niet de uitlijning van het logo beïnvloedt */
@@ -80,9 +78,8 @@ nav.scrolled a:hover {
   text-underline-offset: 0; /* Zet dit op 0 om de onderlijn direct onder de tekst te houden */
 }
 
-
-
 .main-content {
+  position: relative;
   text-align: center; 
 }
 
@@ -106,7 +103,6 @@ nav.scrolled a:hover {
   position: relative; 
   z-index: 10; 
 }
-
 
 .contact-button {
   margin-left: 10px; 
@@ -154,14 +150,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 20px; 
-  padding: 0 20px; 
 }
-
-/* .dienst-box {
-  background-color: #f9f9f9; 
-  border-radius: 10px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-} */
 
 .dienst-box img {
   max-width: 100%; 
@@ -272,15 +261,56 @@ footer ul li a:hover {
   display: block;
 }
 
-
-
 .nav-links {
   display: flex; 
   gap: 15px; 
 }
+.text-overlay p {
+  color: black; /* Overschrijft de algemene p-stijl */
+}
+.main-content .text-overlay {
+  position: absolute; /* Zorgt ervoor dat de tekst bovenop staat */
+  top: 20%; /* Plaatsing vanaf de bovenkant */
+  left: 10%; /* Plaatsing vanaf de linkerkant */
+  color: black; /* Zwarte tekstkleur */
+  font-size: 1.8rem; /* Basis tekstgrootte */
+  font-weight: bold;
+  line-height: 1.4;
+  max-width: 50%;
+  z-index: 10;
+}
+
+.main-content .text-overlay .name {
+  font-weight: bold; /* Vetgedrukte naam */
+  font-size: 1.8rem; /* Grotere tekst voor de naam */
+  margin-bottom: 5px; /* Ruimte onder de naam */
+  text-align: left; /* Tekst links uitlijnen */
+}
+
+.main-content .text-overlay .name_info {
+  font-weight:normal; /* Vetgedrukte naam */
+  font-size: 1.3rem; /* Grotere tekst voor de naam */
+  margin-bottom: 5px; /* Ruimte onder de naam */
+  text-align: left; /* Tekst links uitlijnen */
+}
 
 /* Media query voor tablets */
 @media (max-width: 768px) {
+  .main-content .text-overlay {
+    font-size: 0.3rem; /* Iets kleinere tekst op kleinere schermen */
+    top: 15%; /* Pas positie aan voor een betere lay-out */
+    left: 5%; /* Verminder de marge aan de linkerkant */
+    max-width: 90%; /* Zorg dat de tekst niet buiten het scherm valt */
+  }
+
+  .main-content .text-overlay .name {
+    font-size: 1.5rem; /* Schaal de naam voor tablets */
+  }
+
+  .main-content .text-overlay .name_info {
+    font-size: 1rem; /* Schaal de info voor tablets */
+  }
+
   .diensten-grid {
     grid-template-columns: repeat(2, 1fr); 
   }
@@ -304,13 +334,15 @@ footer ul li a:hover {
   }
 
   .desktop-image {
-    display: none; 
+    width: 100%; /* Zorgt ervoor dat de afbeelding de volledige breedte van de container neemt */
+    height: auto;
   }
 
   .mobile-image {
     display: block; 
     max-width: 100%; 
     height: auto; 
+    display: none;
   }
 
   .hamburger {
@@ -329,6 +361,10 @@ footer ul li a:hover {
 
 /* Media query voor smartphones */
 @media (max-width: 480px) {
+  .main-content .text-overlay {
+    display: none;
+  }
+
   .diensten-grid {
     grid-template-columns: 1fr; 
   }
@@ -368,7 +404,6 @@ footer ul li a:hover {
   .nav-links {
     display: none; 
   }
-
 
   .dropdown-content {
     margin-left: 90px;
