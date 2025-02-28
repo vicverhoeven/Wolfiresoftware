@@ -1,412 +1,100 @@
-/* Algemene reset voor marges en padding */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    position: relative;
 }
 
-main {
-  width: 100%;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
-header {
-  background: #ffffff;
-  padding: 20px;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  position: sticky; 
-  top: 0;
-  z-index: 1000; 
-  transition: padding 0.1s ease, background-color 0.1s ease;
+.container {
+    text-align: center;
+    z-index: 2;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-header.scrolled {
-  padding: 10px; /* Maak de header dunner */
-  background: #f8f8f8; /* Verander de achtergrondkleur */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Voeg een schaduw toe */
+.coming-soon {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.logo {
-  max-width: 200px; 
-  height: auto;
-  margin: 0 auto; 
+.word {
+    display: inline-block;
+    position: relative;
+    color: #fff; /* Standaardkleur voor het hele woord */
+    transition: transform 0.3s ease;
+    background: linear-gradient(90deg, #ff9898, #f6f6f6, #ffd700, #ff6347, #8a2be2); /* Kleurverloop */
+    background-size: 400% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
-nav {
-  position: absolute; /* Dit zorgt ervoor dat de navigatie niet de uitlijning van het logo beïnvloedt */
-  left: 20px;
-  display: flex; 
-  gap: 15px; 
+.word:hover {
+    background-position: 0 0; /* Verschuift het kleurverloop bij hover */
+    transition: background-position 1s ease;
 }
 
-nav a {
-  color: #2d2820; 
-  padding: 10px 0;
-  font-size: 1.2em;
-  text-decoration: none;
-  font-family: 'Montreal', sans-serif;
-  position: relative; /* Zorg ervoor dat de onderlijn goed gepositioneerd kan worden */
+.word-wolfire {
+    font-family: 'League Spartan', sans-serif;
+    letter-spacing: -0.0952em;
 }
 
-nav a::after {
-  content: '';
-  display: block;
-  height: 2px; /* Dikte van de onderlijn */
-  background: #b99d7b; /* Kleur van de onderlijn */
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px; /* Plaats de onderlijn onder de tekst */
-  transform: scaleX(0); /* Begin met een schaal van 0 (niet zichtbaar) */
-  transition: transform 0.3s ease; /* Animatie voor de onderlijn */
+.description {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 30px;
+    letter-spacing: 1px;
 }
 
-nav a:hover::after,
-nav.scrolled a::after {
-  transform: scaleX(1); /* Maak de onderlijn zichtbaar */
+/* Animaties */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
-nav.scrolled a:hover {
-  color: #b99d7b;
-  text-decoration: underline;
-  text-underline-offset: 0; /* Zet dit op 0 om de onderlijn direct onder de tekst te houden */
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-.main-content {
-  position: relative;
-  text-align: center; 
-}
-
-.main-content h1 {
-  font-size: 24px; 
-  margin-bottom: 10px; 
-}
-
-.main-content img {
-  max-width: 100%; 
-  height: auto; 
-}
-
-/* Announcement Bar styling */
-.announcement-bar {
-  background-image: url("../images/mac.png");
-  color: #dbdbdb; 
-  padding: 10px;
-  text-align: center;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); 
-  position: relative; 
-  z-index: 10; 
-}
-
-.contact-button {
-  margin-left: 10px; 
-  padding: 8px 15px; 
-  color: #333; 
-  text-decoration: none; 
-  border-radius: 4px; 
-}
-
-.contact-button:hover {
-  color: #e7a014;
-}
-
-/* Section styling */
-section {
-  margin-bottom: 40px;
-}
-
-h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-p, ul {
-  font-size: 1em;
-  color: #555;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.diensten {
-  margin: 40px 0; 
-  text-align: center; 
-}
-
-.diensten h2 {
-  font-size: 28px; 
-  margin-bottom: 20px; 
-}
-
-.diensten-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px; 
-}
-
-.dienst-box img {
-  max-width: 100%; 
-  height: auto; 
-  border-radius: 10px; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dienst-box img:hover {
-  transform: scale(0.99); 
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-}
-
-.dienst-box h3 {
-  font-size: 20px; 
-  margin: 10px 0; 
-}
-
-.dienst-box p {
-  font-size: 16px; 
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-.cta {
-  text-align: center; 
-  margin: 40px 0; 
-}
-
-.cta-button {
-  display: inline-block; 
-  padding: 15px 30px; 
-  background-color: #b99d7b; 
-  color: white; 
-  text-decoration: none; 
-  border-radius: 1px; 
-  font-size: 18px; 
-  transition: background-color 0.3s; 
-}
-
-.cta-button:hover {
-  background-color: #767474; 
-}
-
-/* Footer styling */
-footer {
-  text-align: center; 
-  margin-top: 40px; 
-  font-size: 0.9em;
-  background: #ececec; 
-  padding: 10px;
-  height: 100px;
-  position: relative; 
-  width: 100%; 
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 50px;
-  align-items: space-between;
-
-  gap: 10px;
-}
-
-footer ul li {
-  display: inline;
-  margin-top: 100px;
-}
-
-footer ul li a {
-  text-decoration: none;
-  color: inherit; /* Past de tekstkleur van de link aan aan de stijl van de footer */
-  margin-inline: 10px;
-}
-
-footer ul li a:hover {
-  text-decoration: underline; /* Optioneel, voor een hover-effect */
-}
-
-.mobile-image {
-  display: none; 
-}
-
-.hamburger {
-  display: none; 
-  font-size: 30px; 
-  cursor: pointer; 
-}
-
-/* Dropdown inhoud (verborgen standaard) */
-.dropdown-content {
-  display: none; 
-  flex-direction: column; 
-  position: absolute; 
-  background-color: #ffffff; 
-  min-width: 160px; 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  padding-bottom: 5px;
-}
-
-.dropdown-content a {
-  color: #2d2820; 
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.nav-links {
-  display: flex; 
-  gap: 15px; 
-}
-.text-overlay p {
-  color: black; /* Overschrijft de algemene p-stijl */
-}
-.main-content .text-overlay {
-  position: absolute; /* Zorgt ervoor dat de tekst bovenop staat */
-  top: 20%; /* Plaatsing vanaf de bovenkant */
-  left: 10%; /* Plaatsing vanaf de linkerkant */
-  color: black; /* Zwarte tekstkleur */
-  font-size: 1.8rem; /* Basis tekstgrootte */
-  font-weight: bold;
-  line-height: 1.4;
-  max-width: 50%;
-  z-index: 10;
-}
-
-.main-content .text-overlay .name {
-  font-weight: bold; /* Vetgedrukte naam */
-  font-size: 1.8rem; /* Grotere tekst voor de naam */
-  margin-bottom: 5px; /* Ruimte onder de naam */
-  text-align: left; /* Tekst links uitlijnen */
-}
-
-.main-content .text-overlay .name_info {
-  font-weight:normal; /* Vetgedrukte naam */
-  font-size: 1.3rem; /* Grotere tekst voor de naam */
-  margin-bottom: 5px; /* Ruimte onder de naam */
-  text-align: left; /* Tekst links uitlijnen */
-}
-
-/* Media query voor tablets */
 @media (max-width: 768px) {
-  .main-content .text-overlay {
-    font-size: 0.3rem; /* Iets kleinere tekst op kleinere schermen */
-    top: 15%; /* Pas positie aan voor een betere lay-out */
-    left: 5%; /* Verminder de marge aan de linkerkant */
-    max-width: 90%; /* Zorg dat de tekst niet buiten het scherm valt */
-  }
-
-  .main-content .text-overlay .name {
-    font-size: 1.5rem; /* Schaal de naam voor tablets */
-  }
-
-  .main-content .text-overlay .name_info {
-    font-size: 1rem; /* Schaal de info voor tablets */
-  }
-
-  .diensten-grid {
-    grid-template-columns: repeat(2, 1fr); 
-  }
-
-  nav a {
-    font-size: 1.2em; 
-    margin: 0 15px; 
-  }
-
-  .cta-button {
-    padding: 12px 25px; 
-    font-size: 16px; 
-  }
-
-  .dienst-box h3 {
-    font-size: 18px; 
-  }
-
-  .dienst-box p {
-    font-size: 14px; 
-  }
-
-  .desktop-image {
-    width: 100%; /* Zorgt ervoor dat de afbeelding de volledige breedte van de container neemt */
-    height: auto;
-  }
-
-  .mobile-image {
-    display: block; 
-    max-width: 100%; 
-    height: auto; 
-    display: none;
-  }
-
-  .hamburger {
-    display: block; 
-  }
-
-  .nav-links {
-    display: none; 
-  }
-
-  .dropdown-content {
-    margin-left: -20px;
-    margin-top: 40px; 
-  }
-}
-
-/* Media query voor smartphones */
-@media (max-width: 480px) {
-  .main-content .text-overlay {
-    display: none;
-  }
-
-  .diensten-grid {
-    grid-template-columns: 1fr; 
-  }
-
-  nav {
-    flex-direction: column; 
-    align-items: center; 
-  }
-
-  nav a {
-    margin: 5px 0; 
-  }
-
-  .cta-button {
-    padding: 12px 25px; 
-    font-size: 16px; 
-  }
-
-  footer {
-    font-size: 0.8em; 
-  }
-
-  .desktop-image {
-    display: none; 
-  }
-
-  .mobile-image {
-    display: block; 
-    max-width: 100%; 
-    height: auto; 
-  }
-
-  .hamburger {
-    display: block; 
-  }
-
-  .nav-links {
-    display: none; 
-  }
-
-  .dropdown-content {
-    margin-left: 90px;
-    margin-top: 40px; 
-  }
+    .coming-soon {
+        font-size: 2.5rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .container {
+        padding: 40px;
+    }
 }
