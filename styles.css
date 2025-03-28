@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    background: #121212;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -30,10 +30,6 @@ body {
     text-align: center;
     z-index: 2;
     padding: 60px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -50,28 +46,18 @@ body {
     position: relative;
     color: #fff; /* Standaardkleur voor het hele woord */
     transition: transform 0.3s ease;
-    background: linear-gradient(90deg, #ff9898, #f6f6f6, #ffd700, #ff6347, #8a2be2); /* Kleurverloop */
-    background-size: 400% 100%;
-    background-position: 100% 0;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.word:hover {
-    background-position: 0 0; /* Verschuift het kleurverloop bij hover */
-    transition: background-position 1s ease;
 }
 
 .word-wolfire {
     font-family: 'League Spartan', sans-serif;
     letter-spacing: -0.0952em;
+    color: #fff;
 }
 
 .description {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     margin-top: 30px;
     letter-spacing: 1px;
 }
